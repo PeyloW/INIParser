@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PWINIParser : NSObject
+@interface PEWINIParser : NSObject
+
++ (NSDictionary *)dictionaryWithINIFile:(NSString *)path;
 
 @end

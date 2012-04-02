@@ -7,15 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PEWINIParser.h"
 
 int main(int argc, const char * argv[])
 {
-
     @autoreleasepool {
-        
-        // insert code here...
-        NSLog(@"Hello, World!");
-        
+        /*
+         * TODO: !!! Copy the test.ini file to your Desktop !!!
+         */
+        NSString *path = [@"~/Desktop/test.ini" stringByExpandingTildeInPath];
+        NSDictionary *iniFile = [PEWINIParser dictionaryWithINIFile:path];
+        NSLog(@"INI file: %@", iniFile);
     }
     return 0;
 }
